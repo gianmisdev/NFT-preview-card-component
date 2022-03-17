@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+  <!--FONT-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* Colors */
+    :root
+    {
+      /* Primary */
+      --soft-blue: hsl(215, 51%, 70%);
+      --cyan: hsl(178, 100%, 50%);
+      /* Neutral */
+      --very-dark-blue-main: hsl(217, 54%, 11%); /* (main BG) */
+      --very-dark-blue-card: hsl(216, 50%, 16%); /* (card BG) */
+      --very-dark-blue-line: hsl(215, 32%, 27%); /* (line) */
+      --white: hsl(0, 0%, 100%);
+    }
+
+    body
+    {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+
+      background-color: var(--very-dark-blue-main);
+
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    section
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex-direction: column;
+
+      height: 100vh;
+      width: 100vw;
+
+    }
+
+    .card
+    {
+      background-color: var(--very-dark-blue-card);
+
+      padding: 20px 20px;
+
+      border-radius: 10px;
+    }
+    .cabecera
+    {
+      height: 280px;
+      /* width: 280px; */
+      width: 100%;
+
+      background-image: url(images/image-equilibrium.jpg);
+      background-position: center;
+      background-size: cover;
+
+      border-radius: 10px;      
+    }
+
+    .texto h1
+    {
+      color: var(--white);
+      font-size: 1.2rem;
+    }
+    .texto p
+    {
+      color: var(--soft-blue);
+      font-size: 1rem;
+    }
+    
+    .valor
+    {
+      display: flex;
+      justify-content: space-between;
+      
+      padding-bottom: 5px;
+    }
+    .eth
+    {
+      color: var(--cyan);
+    }
+    .days
+    {
+      color: var(--soft-blue);
+    }
+    .divider
+    {
+      border-top: 0px solid var(--very-dark-blue-line);
+    }
+
+    .pie
+    {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .pie img
+    {
+      width: 30px;
+      height: 30px;
+
+      border: 1px solid var(--white);
+      border-radius: 50%;
+    }
+    .pa 
+    {
+      color: var(--soft-blue);
+      
+    }
+    .name
+    {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    @media (min-width: 900px)
+    {
+      .card
+      {
+        width: 260px;
+      }
+
+      .name:hover
+      {
+        color: var(--cyan);
+        
+      }
+
+      h1:hover
+      {
+        color: var(--cyan);
+        cursor: pointer;
+      }
+      
+      .cabecera:hover
+      {
+        background-image: url(images/image-equilibrium.jpg), url(images/icon-view.svg);
+        background-position: center;
+        background-size: cover, 40px;
+        background-repeat: no-repeat;
+        background-color: var(--cyan);
+        background-blend-mode: screen;
+        opacity: 0.5;
+        
+        cursor: pointer;
+      }
+    }
+   
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="card">
+      <header class="cabecera"></header>
+      <main>
+        <div class="texto">
+          <h1>Equilibrium #3429</h1>
+          <p>Our Equilibrium collection promotes<br>
+            balance and calm.</p>
+        </div>
+        <div class="valor">
+          <span class="eth">
+            <img src="images/icon-ethereum.svg">
+            0.041 ETH
+          </span>
+          <span class="days">
+            <img src="images/icon-clock.svg">
+            3 days left
+          </span>
+        </div>
+      </main>
+      <hr class="divider">
+      <footer class="pie">
+        <img src="images/image-avatar.png">
+          <span class="pa">Creation of <a href="#" class="name">Jules Wyvern</a></span>
+          
+      </footer>
+    </div>
+  </section>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
